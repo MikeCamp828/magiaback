@@ -1,17 +1,22 @@
 // config/db.js
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('postgres://pueblos_magicos_db_user:UGniRG69mzHnV1f8VLX1G7MkZHhRQfIG@dpg-cu25qh56l47c73a99hc0-a/pueblos_magicos_db', {
-  dialect: 'postgres',
-  protocol: 'postgres',
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false, // Importante para conexiones seguras
+const sequelize = new Sequelize(
+  process.env.DB_NAME, // pueblos_magicos_db
+  process.env.DB_USER, // admin8285
+  process.env.DB_PASSWORD, // tu contraseña
+  {
+    host: process.env.DB_HOST, // 8285magicos.postgres.database.azure.com
+    dialect: 'postgres',
+    port: 5432,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // Asegura la conexión SSL
+      },
     },
-  },
-});
-sequelize.authenticate()
-  .then(() => console.log('Conexión a la base de datos exitosa.'))
-  .catch((err) => console.error('Error al conectar la base de datos:', err));
+  }
+);
+
 module.exports = sequelize;

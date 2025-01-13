@@ -1,14 +1,14 @@
 {
   "name": "pueblos-magicos-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Backend para el proyecto Pueblos Mágicos",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "TuNombre",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",

@@ -1,15 +1,14 @@
 {
   "name": "pueblos-magicos-backend",
   "version": "1.0.0",
-  "main": "server.js", // Asegúrate de que tu archivo principal se llame server.js
+  "description": "Backend para Pueblos Mágicos",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js", // Agregamos el script start
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "TuNombre",
+  "author": "Tu Nombre",
   "license": "ISC",
-  "description": "Backend para Pueblos Mágicos",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -20,8 +19,5 @@
     "pg": "^8.13.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.5"
-  },
-  "engines": { // Opcional pero recomendado
-    "node": ">=14.0.0" 
   }
 }
